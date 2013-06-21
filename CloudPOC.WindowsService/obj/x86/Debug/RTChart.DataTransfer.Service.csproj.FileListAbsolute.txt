@@ -1,0 +1,8 @@
+D:\Personal\RTChart\RTDataDownloader\RTDataDownloaderService\bin\Debug\RTChart.DataTransfer.Service.exe.config
+D:\Personal\RTChart\RTDataDownloader\RTDataDownloaderService\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Personal\RTChart\RTDataDownloader\RTDataDownloaderService\bin\Debug\RTChart.DataTransfer.Service.exe
+D:\Personal\RTChart\RTDataDownloader\RTDataDownloaderService\bin\Debug\RTChart.DataTransfer.Service.pdb
+D:\Personal\RTChart\RTDataDownloader\RTDataDownloaderService\bin\Debug\RTChart.DataTransfer.Library.dll
+D:\Personal\RTChart\RTDataDownloader\RTDataDownloaderService\bin\Debug\RTChart.DataTransfer.Library.pdb
+D:\Personal\RTChart\RTDataDownloader\RTDataDownloaderService\obj\x86\Debug\RTChart.DataTransfer.Service.exe
+D:\Personal\RTChart\RTDataDownloader\RTDataDownloaderService\obj\x86\Debug\RTChart.DataTransfer.Service.pdb

@@ -1,0 +1,12 @@
+C:\Users\anantha.cn\Downloads\aquiles-96133\trunk\Aquiles.Core\bin\Release\Aquiles.Core.dll
+C:\Users\anantha.cn\Downloads\aquiles-96133\trunk\Aquiles.Core\bin\Release\Aquiles.Core.pdb
+C:\Users\anantha.cn\Downloads\aquiles-96133\trunk\Aquiles.Core\obj\Release\Aquiles.Core.dll
+C:\Users\anantha.cn\Downloads\aquiles-96133\trunk\Aquiles.Core\obj\Release\Aquiles.Core.pdb
+D:\Development\CloudPOC\CloudASPNETWebApi\Aquiles.Core\bin\Release\Aquiles.Core.dll
+D:\Development\CloudPOC\CloudASPNETWebApi\Aquiles.Core\bin\Release\Aquiles.Core.pdb
+D:\Development\CloudPOC\CloudASPNETWebApi\Aquiles.Core\obj\Release\Aquiles.Core.dll
+D:\Development\CloudPOC\CloudASPNETWebApi\Aquiles.Core\obj\Release\Aquiles.Core.pdb
+D:\Development\CloudPOC\Aquiles.Core\bin\Release\Aquiles.Core.dll
+D:\Development\CloudPOC\Aquiles.Core\bin\Release\Aquiles.Core.pdb
+D:\Development\CloudPOC\Aquiles.Core\obj\Release\Aquiles.Core.dll
+D:\Development\CloudPOC\Aquiles.Core\obj\Release\Aquiles.Core.pdb
