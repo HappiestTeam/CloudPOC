@@ -89,7 +89,6 @@ D:\GitHub\CloudPOC\CloudPOC.RestAPI\bin\System.Web.WebPages.dll
 D:\GitHub\CloudPOC\CloudPOC.RestAPI\bin\System.Web.WebPages.Razor.dll
 D:\GitHub\CloudPOC\CloudPOC.RestAPI\bin\Aquiles.Cassandra10.pdb
 D:\GitHub\CloudPOC\CloudPOC.RestAPI\bin\Aquiles.Core.pdb
-D:\GitHub\CloudPOC\CloudPOC.RestAPI\bin\EntityFramework.xml
 D:\GitHub\CloudPOC\CloudPOC.RestAPI\bin\Microsoft.Web.Infrastructure.xml
 D:\GitHub\CloudPOC\CloudPOC.RestAPI\bin\System.Net.Http.xml
 D:\GitHub\CloudPOC\CloudPOC.RestAPI\bin\System.Net.Http.Formatting.xml

@@ -7,6 +7,8 @@ using Aquiles.Core.Cluster;
 using RabbitMQ.Client;
 using System.Net;
 using System.IO;
+using Thrift.Transport;
+using Thrift.Protocol;
 
 namespace Service.Scheduler
 {
@@ -16,6 +18,7 @@ namespace Service.Scheduler
         static string queueName = "Demo-Queue";
         static string downloadFolderLocation = @"c:\temp";
         static bool fileDownloadSuccess;
+        static bool success;
 
         public static void PullDataFromQueue()
         {
@@ -107,6 +110,7 @@ namespace Service.Scheduler
 
         private static void InsertIntoCassandraDB(string url, FileInfo fileInfo)
         {
+            CheckCassandraIsRunning();
             byte[] key = ByteEncoderHelper.UTF8Encoder.ToByteArray(url);
             byte[] extension = ByteEncoderHelper.UTF8Encoder.ToByteArray(fileInfo.Extension);
             byte[] size = ByteEncoderHelper.UTF8Encoder.ToByteArray(fileInfo.Length.ToString());
@@ -143,6 +147,25 @@ namespace Service.Scheduler
                 client.insert(key, columnParent, sizeColumn, ConsistencyLevel.ONE);
                 return null;
             }), KEYSPACENAME);
+        }
+
+        private static bool CheckCassandraIsRunning()
+        {
+            TTransport transport = new TSocket("localhost", 9160);
+            TProtocol protocol = new TBinaryProtocol(transport);
+            Cassandra.Client client = new Cassandra.Client(protocol);
+            try
+                {
+                    transport.Open();
+                    success = true;
+                }
+                catch
+                {
+                    success = false;
+                }
+              
+            return success;
+            
         }
     }
 }
