@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CloudPOC.TestData
 {
-    class LoginData
+    class SampleData
     {
         //public const string userId = "veeravasanth26@yahoo.co.in";
         //public const string password = "mahesh2";
