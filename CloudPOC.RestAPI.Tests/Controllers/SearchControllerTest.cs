@@ -10,7 +10,7 @@ using System.Configuration;
 
 namespace CloudASPNETWebApi.Tests.Controllers
 {
-    [TestClass]
+    [TestClass,Ignore]
     public class SearchControllerTest
     {
         [TestMethod]
