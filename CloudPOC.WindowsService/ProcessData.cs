@@ -58,9 +58,12 @@ namespace Service.Scheduler
 
         private static bool InitiateDownload(string url, ref string localFileName, ref FileInfo fileInfo, Uri uri)
         {
+            if(uri != null)
+            {
             using (WebClient webClient = new WebClient())
             {
                 localFileName = System.IO.Path.GetFileName(uri.LocalPath);
+                CheckIfFileExists(url);
                 webClient.DownloadFile(url, localFileName);
                 fileInfo = new FileInfo(localFileName);
                 if (fileInfo != null)
@@ -75,7 +78,32 @@ namespace Service.Scheduler
                 return fileDownloadSuccess;
 
             }
+          }
+            return fileDownloadSuccess = false;
+
         }
+
+        private static bool CheckIfFileExists(string url)
+        {
+            try
+            {
+                //Creating the HttpWebRequest
+                HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;
+                //Setting the Request method HEAD, you can also use GET too.
+                request.Method = "HEAD";
+                //Getting the Web Response.
+                HttpWebResponse response = request.GetResponse() as HttpWebResponse;
+                //Returns TRUE if the Status code == 200
+                return (response.StatusCode == HttpStatusCode.OK);
+            }
+            catch
+            {
+                //Any exception will returns false.
+                return false;
+            }
+
+        }
+
 
         private static void InsertIntoCassandraDB(string url, FileInfo fileInfo)
         {
