@@ -11,6 +11,5 @@ D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\Thrift.dll
 D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\Aquiles.Cassandra10.pdb
 D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\Aquiles.Core.pdb
 D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\DemoService.Scheduler.pdb
-D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\RabbitMQ.Client.xml
 D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\DemoService.Scheduler_Accessor.exe
 D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\DemoService.Scheduler_Accessor.pdb

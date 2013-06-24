@@ -138,5 +138,19 @@ namespace Service.Scheduler.Tests
             Assert.AreEqual(expected, actual);
             
         }
+
+        /// <summary>
+        ///A test for CanConnectToDatabase
+        ///</summary>
+        [TestMethod()]
+        [DeploymentItem("DemoService.Scheduler.exe")]
+        public void CheckCassandraIsRunningTest()
+        {
+            bool expected = true; // TODO: Initialize to an appropriate value
+            bool actual;
+            actual = ProcessData_Accessor.CheckCassandraIsRunning();
+            Assert.AreEqual(expected, actual);
+           
+        }
     }
 }

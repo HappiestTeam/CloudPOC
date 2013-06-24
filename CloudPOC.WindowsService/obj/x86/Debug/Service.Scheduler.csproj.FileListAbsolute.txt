@@ -35,7 +35,6 @@ D:\GitHub\CloudPOC\CloudPOC.WindowsService\bin\Debug\Aquiles.Core.dll
 D:\GitHub\CloudPOC\CloudPOC.WindowsService\bin\Debug\Thrift.dll
 D:\GitHub\CloudPOC\CloudPOC.WindowsService\bin\Debug\Aquiles.Cassandra10.pdb
 D:\GitHub\CloudPOC\CloudPOC.WindowsService\bin\Debug\Aquiles.Core.pdb
-D:\GitHub\CloudPOC\CloudPOC.WindowsService\bin\Debug\RabbitMQ.Client.xml
 D:\GitHub\CloudPOC\CloudPOC.WindowsService\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\GitHub\CloudPOC\CloudPOC.WindowsService\obj\x86\Debug\DemoService.Scheduler.exe
 D:\GitHub\CloudPOC\CloudPOC.WindowsService\obj\x86\Debug\DemoService.Scheduler.pdb
