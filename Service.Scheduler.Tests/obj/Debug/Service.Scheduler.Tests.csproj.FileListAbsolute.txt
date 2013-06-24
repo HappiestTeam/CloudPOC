@@ -1,0 +1,16 @@
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\Service.Scheduler.Tests.dll
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\Service.Scheduler.Tests.pdb
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\obj\Debug\Service.Scheduler.Tests.dll
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\obj\Debug\Service.Scheduler.Tests.pdb
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\Aquiles.Cassandra10.dll
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\Aquiles.Core.dll
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\DemoService.Scheduler.exe
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\RabbitMQ.Client.dll
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\Thrift.dll
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\Aquiles.Cassandra10.pdb
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\Aquiles.Core.pdb
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\DemoService.Scheduler.pdb
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\RabbitMQ.Client.xml
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\DemoService.Scheduler_Accessor.exe
+D:\GitHub\CloudPOC\Service.Scheduler.Tests\bin\Debug\DemoService.Scheduler_Accessor.pdb
