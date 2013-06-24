@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<CAErwinMartAdminTests>
+<TestGroup Name="LoginData">
+<TestData  Name="userId" Value="admin"/>
+<TestData  Name= "password" DataValue="password"/>
+</TestGroup >
+ </CAErwinMartAdminTests>
