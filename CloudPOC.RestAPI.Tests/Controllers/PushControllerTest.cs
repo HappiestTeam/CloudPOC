@@ -9,7 +9,7 @@ using System.Configuration;
 
 namespace CloudASPNETWebApi.Tests.Controllers
 {
-    [TestClass,Ignore]
+    [TestClass]
     public class PushControllerTest
     {
         [TestMethod]
