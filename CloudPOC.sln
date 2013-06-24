@@ -31,7 +31,19 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CloudPOC.UI", "CloudPOC.UI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Scheduler", "CloudPOC.WindowsService\Service.Scheduler.csproj", "{9F22DA1B-119D-4D65-B81B-44DB99A70EE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Scheduler.Tests", "Service.Scheduler.Tests\Service.Scheduler.Tests.csproj", "{B197827B-74C4-4E42-90FC-28A299756983}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F168D888-779D-4A22-8A02-715573D74286}"
+	ProjectSection(SolutionItems) = preProject
+		CloudPOC.vsmdi = CloudPOC.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = CloudPOC.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -101,6 +113,16 @@ Global
 		{9F22DA1B-119D-4D65-B81B-44DB99A70EE7}.Release|Mixed Platforms.Build.0 = Release|x86
 		{9F22DA1B-119D-4D65-B81B-44DB99A70EE7}.Release|x86.ActiveCfg = Release|x86
 		{9F22DA1B-119D-4D65-B81B-44DB99A70EE7}.Release|x86.Build.0 = Release|x86
+		{B197827B-74C4-4E42-90FC-28A299756983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B197827B-74C4-4E42-90FC-28A299756983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B197827B-74C4-4E42-90FC-28A299756983}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B197827B-74C4-4E42-90FC-28A299756983}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B197827B-74C4-4E42-90FC-28A299756983}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B197827B-74C4-4E42-90FC-28A299756983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B197827B-74C4-4E42-90FC-28A299756983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B197827B-74C4-4E42-90FC-28A299756983}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B197827B-74C4-4E42-90FC-28A299756983}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B197827B-74C4-4E42-90FC-28A299756983}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

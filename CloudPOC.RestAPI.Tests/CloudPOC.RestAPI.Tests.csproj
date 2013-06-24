@@ -112,7 +112,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CloudPOC.RestAPI\CloudPOC.RestAPI.csproj">
       <Project>{445A4699-E24F-4BE5-BDB2-6A4A8E0E22B3}</Project>
-      <Name>CloudASPNETWebApi</Name>
+      <Name>CloudPOC.RestAPI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

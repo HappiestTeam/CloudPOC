@@ -15,6 +15,7 @@ namespace Service.Scheduler
         static string KEYSPACENAME = "las";
         static string queueName = "Demo-Queue";
         static string downloadFolderLocation = @"c:\temp";
+        static bool fileDownloadSuccess;
 
         public static void PullDataFromQueue()
         {
@@ -44,14 +45,36 @@ namespace Service.Scheduler
             FileInfo fileInfo = null;
             string tmpFileName = "tmpFile";
             Uri uri = new Uri(url);
-            using(WebClient webClient = new WebClient())
+            if (!string.IsNullOrEmpty(url))
+            {
+                 uri = new Uri(url);
+                fileDownloadSuccess = InitiateDownload(url, ref localFileName, ref fileInfo, uri);
+                if (fileDownloadSuccess)
+                {
+                    InsertIntoCassandraDB(url, fileInfo);
+                }
+            }
+        }
+
+        private static bool InitiateDownload(string url, ref string localFileName, ref FileInfo fileInfo, Uri uri)
+        {
+            using (WebClient webClient = new WebClient())
             {
                 localFileName = System.IO.Path.GetFileName(uri.LocalPath);
                 webClient.DownloadFile(url, localFileName);
                 fileInfo = new FileInfo(localFileName);
-            }            
+                if (fileInfo != null)
+                {
+                    fileDownloadSuccess = true;
+                }
+                else
+                {
+                    fileDownloadSuccess = false;
+                }
 
-            InsertIntoCassandraDB(url, fileInfo);
+                return fileDownloadSuccess;
+
+            }
         }
 
         private static void InsertIntoCassandraDB(string url, FileInfo fileInfo)
