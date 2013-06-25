@@ -29,9 +29,9 @@ namespace CloudASPNETWebApi.Tests.Controllers
             PushController pushController = new PushController();
             pushActual = pushController.PushMessages(message);
             List<string> parsedMsg = new List<string>();
+            Assert.AreEqual(parsedMsg[0], pushActual[0].cloudMessage);
             var delimiter = ConfigurationManager.AppSettings["Delimiter"];
             parsedMsg = message.Split(Convert.ToChar(delimiter)).ToList();
-            Assert.AreEqual(parsedMsg[0], pushActual[0].cloudMessage);
             Assert.AreEqual(parsedMsg[1], pushActual[1].cloudMessage);
         }
 
