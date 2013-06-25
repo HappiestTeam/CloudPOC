@@ -19,12 +19,12 @@ namespace CloudASPNETWebApi.Controllers
 
         [System.Web.Http.AcceptVerbs("GET", "POST")]
         [System.Web.Http.HttpPost]
-        public List<Push> PushMessages(string msg)       
+        public List<Push> PushMessages(string url)       
         {
             string queueName = ConfigurationManager.AppSettings["QueueName"];
             try
             {
-                List<string> parsedMsg = Utility.parseMessage(msg);
+                List<string> parsedMsg = Utility.parseMessage(url);
                 for (int count = 0; count < parsedMsg.Count; count++)
                 {
                     push = new Push();
