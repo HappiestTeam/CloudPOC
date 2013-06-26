@@ -62,9 +62,9 @@
     <Compile Include="Common\TestDataExtractor.cs" />
     <Compile Include="Global\GlobalValues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestData\LoginData.cs" />
-    <Compile Include="Tests\LoginTests.cs" />
-    <Compile Include="UIMapping\LoginPage.cs" />
+    <Compile Include="TestData\HomePageData.cs" />
+    <Compile Include="Tests\UITests.cs" />
+    <Compile Include="UIMapping\HomePage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Screenshots\" />
