@@ -15,6 +15,7 @@ using Aquiles.Core;
 using Aquiles.Core.Configuration;
 using Aquiles.Core.Cluster;
 using Aquiles.Helpers;
+using System.Net;
 
 namespace CloudASPNETWebApi.Controllers
 {
@@ -24,7 +25,7 @@ namespace CloudASPNETWebApi.Controllers
 
         [System.Web.Http.AcceptVerbs("GET", "POST")]
         [System.Web.Http.HttpPost]
-        public bool Search(string url)
+        public string Search(string url)
         {
             #region Unused code
             /*var doc = XDocument.Load(@"D:\\Search.xml");
@@ -37,21 +38,25 @@ namespace CloudASPNETWebApi.Controllers
              */
             #endregion
 
-            byte[] key = ByteEncoderHelper.UTF8Encoder.ToByteArray(url);
-            //byte[] extension = ByteEncoderHelper.UTF8Encoder.ToByteArray("pdf");
-            //byte[] size = ByteEncoderHelper.UTF8Encoder.ToByteArray("194329423");
 
-            // Fetch inserted data
-            ColumnPath columnPath = new ColumnPath()
+            try
             {
-                Column = ByteEncoderHelper.UTF8Encoder.ToByteArray("url"),
-                Column_family = "resource",
-            };
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                byte[] key = ByteEncoderHelper.UTF8Encoder.ToByteArray(url);
+                //byte[] extension = ByteEncoderHelper.UTF8Encoder.ToByteArray("pdf");
+                //byte[] size = ByteEncoderHelper.UTF8Encoder.ToByteArray("194329423");
 
-            ColumnOrSuperColumn columnOrSuperColumn = null;
+                // Fetch inserted data
+                ColumnPath columnPath = new ColumnPath()
+                {
+                    Column = ByteEncoderHelper.UTF8Encoder.ToByteArray("url"),
+                    Column_family = "resource",
+                };
 
-            #region Unused code
-            /*
+                ColumnOrSuperColumn columnOrSuperColumn = null;
+
+                #region Unused code
+                /*
             ColumnParent columnParent = new ColumnParent();
             Column urlColumn = new Column()
             {
@@ -86,10 +91,9 @@ namespace CloudASPNETWebApi.Controllers
             }), KEYSPACENAME);
             */
 
-            #endregion
+                #endregion
 
-            try
-            {
+
                 ICluster cluster = Aquiles.Cassandra10.AquilesHelper.RetrieveCluster("Test Cluster");
                 cluster.Execute(new ExecutionBlock(delegate(CassandraClient client)
                 {
@@ -98,14 +102,19 @@ namespace CloudASPNETWebApi.Controllers
                 }), KEYSPACENAME);
 
                 if (columnOrSuperColumn.Column.Value.SequenceEqual<byte>(key))
-                    return true;
+                    return "Search successful!! Enterd Url '"+ url +"' found.";
+            }
+
+            catch (UriFormatException ex)
+            {
+                return "Invalid URL";
             }
             catch (Exception ex)
             {
-                return false;
+                return "Unable to Find entered Url '" + url + "'";
             }
 
-            return false;
+            return string.Empty;
         }
     }
 }
