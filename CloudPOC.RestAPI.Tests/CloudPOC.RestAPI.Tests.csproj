@@ -95,6 +95,10 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="Thrift, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CloudPOC.RestAPI\bin\Thrift.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\PushControllerTest.cs" />
@@ -110,6 +114,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Aquiles.Cassandra10\Aquiles.Cassandra10.csproj">
+      <Project>{E0237BEF-2ABD-44AE-9232-05DC4C9C706E}</Project>
+      <Name>Aquiles.Cassandra10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aquiles.Core\Aquiles.Core.csproj">
+      <Project>{E96D658F-A28D-4CAC-A414-7328CF12052F}</Project>
+      <Name>Aquiles.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CloudPOC.RestAPI\CloudPOC.RestAPI.csproj">
       <Project>{445A4699-E24F-4BE5-BDB2-6A4A8E0E22B3}</Project>
       <Name>CloudPOC.RestAPI</Name>
