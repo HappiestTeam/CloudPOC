@@ -24,7 +24,7 @@ namespace CloudASPNETWebApi.Controllers
 
         [System.Web.Http.AcceptVerbs("GET", "POST")]
         [System.Web.Http.HttpPost]
-        public bool Search(string url)
+        public bool Search(string msg)
         {
             #region Unused code
             /*var doc = XDocument.Load(@"D:\\Search.xml");
@@ -37,7 +37,7 @@ namespace CloudASPNETWebApi.Controllers
              */
             #endregion
 
-            byte[] key = ByteEncoderHelper.UTF8Encoder.ToByteArray(url);
+            byte[] key = ByteEncoderHelper.UTF8Encoder.ToByteArray(msg);
             //byte[] extension = ByteEncoderHelper.UTF8Encoder.ToByteArray("pdf");
             //byte[] size = ByteEncoderHelper.UTF8Encoder.ToByteArray("194329423");
 

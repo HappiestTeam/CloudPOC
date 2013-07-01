@@ -11,7 +11,7 @@ namespace CloudASPNETWebApi
         {
             config.Routes.MapHttpRoute(
                  name: "DefaultApiWIthMsg",
-                 routeTemplate: "api/{controller}/{url}",
+                 routeTemplate: "api/{controller}/{msg}",
                  defaults: new { msg = RouteParameter.Optional }
             );
 
