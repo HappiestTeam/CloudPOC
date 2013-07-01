@@ -166,6 +166,21 @@ namespace UITests.Tests
             
         }
 
+        private void And_the_URL__is_already_pushed_in_to_cloud(string url)
+        {
+            
+        }
+
+        private void When_search_this_URL_in_cloud()
+        {
+
+        }
+
+        private void Then_the_search_result_should_be_indicate_URL_is_present_in_cloud()
+        {
+            
+        }
+
 
     }
 }
