@@ -63,7 +63,14 @@
     <Compile Include="Global\GlobalValues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestData\HomePageData.cs" />
-    <Compile Include="Tests\UITests.cs" />
+    <Compile Include="Tests\CloudPOC Push URLs.runner.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CloudPOC Push URLs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\CloudPOC Push URLs.steps.cs">
+      <DependentUpon>CloudPOC Push URLs.feature</DependentUpon>
+    </Compile>
     <Compile Include="UIMapping\HomePage.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +79,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Tests\CloudPOC Push URLs.feature">
+      <Generator>RaconteurSingleFileGenerator</Generator>
+      <LastGenOutput>CloudPOC Push URLs.runner.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lib\chromedriver.exe">

@@ -23,7 +23,7 @@ namespace CloudPOC.Common
         public bool NavigateToHomePage(IWebDriver webDriver)
         {
             webDriver.Navigate().GoToUrl(GlobalValues.baseURL);
-            return webDriver.Title.Contains("");
+            return webDriver.Title.Contains("Url Upload");
         }
 
         public bool IsTextPresent(IWebDriver webDriver,string text)
