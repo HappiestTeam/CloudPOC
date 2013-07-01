@@ -12,7 +12,7 @@ namespace UITests.Tests
         {         
             Given_the_CloudPOC_website_is_accessible_from_web_browser();        
             When_I_push_an__URL__to_cloud("URL");        
-            Then_the_URL_shoud_be_listed_in_the_Response_result_with_status_as("status");
+            Then_the_URL_shoud_be_listed_in_the_Response_result_with_status_as("true");
         }
         
         [TestMethod]
@@ -20,7 +20,16 @@ namespace UITests.Tests
         {         
             Given_the_CloudPOC_website_is_accessible_from_web_browser();        
             When_I_push_multiple_URLS__to_cloud("URLs");        
-            Then_the_URLs_shoud_be_listed_in_the_Response_result_with_status_as("status");
+            Then_the_URLs_shoud_be_listed_in_the_Response_result_with_status_as("true");
+        }
+        
+        [TestMethod]
+        public void SearchAnURLPushedToCloud()
+        {         
+            Given_the_CloudPOC_website_is_accessible_from_web_browser();        
+            And_the_URL__is_already_pushed_in_to_cloud("URL");        
+            When_search_this_URL_in_cloud();        
+            Then_the_search_result_should_be_indicate_URL_is_present_in_cloud();
         }
 
     }
