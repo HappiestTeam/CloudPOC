@@ -16,3 +16,10 @@ D:\Work\Icodeon\CloudPOCLatest\CloudPOC\UITests\bin\Debug\UITests.dll
 D:\Work\Icodeon\CloudPOCLatest\CloudPOC\UITests\bin\Debug\UITests.pdb
 D:\Work\Icodeon\CloudPOCLatest\CloudPOC\UITests\obj\Debug\UITests.dll
 D:\Work\Icodeon\CloudPOCLatest\CloudPOC\UITests\obj\Debug\UITests.pdb
+D:\Git-Folder\CloudPOC\UITests\bin\Debug\Lib\chromedriver.exe
+D:\Git-Folder\CloudPOC\UITests\bin\Debug\Lib\IEDriverServer.exe
+D:\Git-Folder\CloudPOC\UITests\bin\Debug\UITests.dll.config
+D:\Git-Folder\CloudPOC\UITests\bin\Debug\UITests.dll
+D:\Git-Folder\CloudPOC\UITests\bin\Debug\UITests.pdb
+D:\Git-Folder\CloudPOC\UITests\obj\Debug\UITests.dll
+D:\Git-Folder\CloudPOC\UITests\obj\Debug\UITests.pdb

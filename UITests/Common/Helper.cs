@@ -7,6 +7,7 @@ using CloudPOC.Global;
 using System.Configuration;
 using OpenQA.Selenium.Support.UI;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.ObjectModel;
 //using OpenQA.Selenium.Support.UI;
 //using MbUnit.Framework;
 
@@ -91,6 +92,21 @@ namespace CloudPOC.Common
                 return null;
             }
         }
+
+        public ReadOnlyCollection<IWebElement> WaitForElements(IWebDriver webDriver, By by, TimeSpan t)
+        {
+            try
+            {
+                IWait<IWebDriver> wait = new WebDriverWait(webDriver, t);
+                return wait.Until(d => d.FindElements(by));
+
+            }
+            catch (NoSuchElementException)
+            {
+                return null;
+            }
+        }
+
 
         public bool WaitForTextOnPage(IWebDriver webDriver,String text, TimeSpan t)
         {

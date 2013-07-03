@@ -7,7 +7,7 @@ namespace CloudPOC.Global
 {
     public static class GlobalValues
     {
-        public static string baseURL = "http://10.18.22.98:8087/login.aspx";
+        public static string baseURL = "http://192.168.2.50:8087/login.aspx";
 
     }
 }
