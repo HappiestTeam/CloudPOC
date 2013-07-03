@@ -143,7 +143,7 @@ namespace UITests.Tests
             try
             {
                 this.singleURL = url;
-                helper.WaitForElement(driver, By.Id(HomePage.tbxUrl), TimeSpan.FromSeconds(30)).SendKeys(HomePageData.SingleUrl);
+                helper.WaitForElement(driver, By.Id(HomePage.tbxUrl), TimeSpan.FromSeconds(30)).SendKeys(url);
                 helper.WaitForElement(driver, By.Id(HomePage.btnPushUrl), TimeSpan.FromSeconds(30)).Click();
 
             }
@@ -160,7 +160,7 @@ namespace UITests.Tests
             try
             {
                 this.MultipleURLs = url;
-                helper.WaitForElement(driver, By.Id(HomePage.tbxUrl), TimeSpan.FromSeconds(30)).SendKeys(HomePageData.MultipleUrls);
+                helper.WaitForElement(driver, By.Id(HomePage.tbxUrl), TimeSpan.FromSeconds(30)).SendKeys(url);
                 helper.WaitForElement(driver, By.Id(HomePage.btnPushUrl), TimeSpan.FromSeconds(30)).Click();
                 
             }
@@ -222,7 +222,7 @@ namespace UITests.Tests
                 String gridsingleUrl = string.Empty;
                 string singleenteredURL = this.singleURL;
                 gridsingleUrl = helper.WaitForElement(driver, By.XPath(HomePage.xpathsinglegridURL), TimeSpan.FromSeconds(30)).Text;
-                
+                URLstatus = helper.WaitForElement(driver, By.XPath(HomePage.xpathStatusURL), TimeSpan.FromSeconds(30)).Text;
                 if (gridsingleUrl.Equals(singleenteredURL))
                 {
                     if (URLstatus.Equals(status))
@@ -232,7 +232,7 @@ namespace UITests.Tests
                     }
 
                 }
-                else if (!URLstatus.Equals(status))
+               if (!URLstatus.Equals(status))
                 {
                     Assert.Fail(string.Format(" The URL : {0} is not present in the response result with status: {1}", gridsingleUrl, status));
                 }
