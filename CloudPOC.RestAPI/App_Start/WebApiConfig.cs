@@ -7,6 +7,7 @@ namespace CloudASPNETWebApi
 {
     public static class WebApiConfig
     {
+        // Adding the comments
         public static void Register(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
