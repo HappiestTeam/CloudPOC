@@ -8,7 +8,8 @@ namespace CloudASPNETWebApi.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+     //Test
+     public ActionResult Index()
         {
             return View();
         }
