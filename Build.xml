@@ -5,7 +5,7 @@
 	<TestSuccessOrNot>1</TestSuccessOrNot>
   </PropertyGroup>
   
-  <Exec Command="$(VS90COMNTOOLS)..\IDE\mstest.exe /testcontainer:TestDLL.dll" >
+  <Exec Command="$(VS90COMNTOOLS)..\IDE\mstest.exe /testcontainer:"..\Service.Scheduler.Tests\bin\Debug\Service.Scheduler.Tests.dll"" >
 	<Output TaskParameter="ExitCode" PropertyName="TestSuccessOrNot/>
 	</Exec>
   
