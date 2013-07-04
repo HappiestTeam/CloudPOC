@@ -2,9 +2,15 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<TestSuccessOrNot>1</TestSuccessOrNot>
   </PropertyGroup>
+  
+  <Exec Command="$(VS90COMNTOOLS)..\IDE\mstest.exe /testcontainer:TestDLL.dll" >
+	<Output TaskParameter="ExitCode" PropertyName="TestSuccessOrNot/>
+	</Exec>
+  
   <Target Name="Build">
     <Message Text="Building msbuildintro $(Configuration)" />
-    <MSBuild Projects="CloudPOC.sln" Targets="Build" />
+    <MSBuild Condition ="'$(TestSuccessOrNot)'=='0'" Projects="CloudPOC.sln" Targets="Build" />
   </Target>
   </Project>
