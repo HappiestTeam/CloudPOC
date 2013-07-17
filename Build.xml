@@ -1,16 +1,27 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-	<TestSuccessOrNot>1</TestSuccessOrNot>
+    <OutDir>$(MSBuildStartupDirectory)\Build\Debug\</OutDir>    
+    <!--<TestSuccessOrNot>1</TestSuccessOrNot>-->
   </PropertyGroup>
+
   
-  <Exec Command="$(VS90COMNTOOLS)..\IDE\mstest.exe /testcontainer:"..\Service.Scheduler.Tests\bin\Debug\Service.Scheduler.Tests.dll"" >
-	<Output TaskParameter="ExitCode" PropertyName="TestSuccessOrNot/>
-	</Exec>
   
+  <!-- Target to run the build-->
   <Target Name="Build">
     <Message Text="Building msbuildintro $(Configuration)" />
-    <MSBuild Condition ="'$(TestSuccessOrNot)'=='0'" Projects="CloudPOC.sln" Targets="Build" />
-  </Target>
+    <MSBuild Projects="CloudPOC.sln"/>
+    
+    <Message Text="Copying all dll's to  $(OutDir)" />
+    <!--<Copy SourceFiles="$(MSBuildStartupDirectory)\Service.Scheduler.Tests\bin\Debug\*.*" DestinationFolder="$(OutDir)"></Copy>-->
+
+    <CreateItem Include="$(MSBuildStartupDirectory)\Service.Scheduler.Tests\bin\Debug\*.*">
+      <Output TaskParameter="Include" ItemName="FilesToArchive"/>
+    </CreateItem>
+    <Copy SourceFiles="@(FilesToArchive)" DestinationFolder="$(OutDir)" ContinueOnError="true"/>
+    
+    <Exec Command='"C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\mstest.exe" /testcontainer:$(OutDir)\Service.Scheduler.Tests.dll'>
+      <Output TaskParameter="ExitCode" PropertyName="TestSuccessOrNot"></Output>
+    </Exec>
+  </Target>  
   </Project>
