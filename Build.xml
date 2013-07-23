@@ -20,7 +20,7 @@
     </CreateItem>
     <Copy SourceFiles="@(FilesToArchive)" DestinationFolder="$(OutDir)" ContinueOnError="true"/>
     
-    <Exec Command='"C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\mstest.exe"' /testcontainer:$(OutDir)\Service.Scheduler.Tests.dll>
+    <Exec Command='"C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\mstest.exe" /testcontainer:$(OutDir)\Service.Scheduler.Tests.dll'>
       <Output TaskParameter="ExitCode" PropertyName="TestSuccessOrNot"></Output>
     </Exec>
   </Target>  
