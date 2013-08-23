@@ -9,6 +9,10 @@ namespace CloudASPNETWebApi.Controllers
     public class HomeController : Controller
     {
      
+        /// <summary>
+        /// vsdfbvgfd
+        /// </summary>
+        /// <returns></returns>
      public ActionResult Index()
         {
             return View();
